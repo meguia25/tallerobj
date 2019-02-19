@@ -8,5 +8,16 @@ namespace ObligatorioDominio.EntidadesDeNegocio
 {
     public class Turista
     {
+        public String Nombre { get; set; }
+        public String Pais { get; set; }
+        public int NDocumento { get; set; }
+        public List<Viaje> Viajes { get; set; }
+
+        public Turista(String unNombre, String unPais, int unNDocumento)
+        {
+            this.Nombre = unNombre;
+            this.Pais = unPais;
+            this.NDocumento = unNDocumento;
+        }
     }
 }
