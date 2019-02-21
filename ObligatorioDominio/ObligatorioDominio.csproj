@@ -40,14 +40,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EntidadesDeNegocio\GuiaTuristico.cs" />
+    <Compile Include="EntidadesDeNegocio\Administrador.cs" />
+    <Compile Include="EntidadesDeNegocio\ConGuia.cs" />
     <Compile Include="EntidadesDeNegocio\Marca.cs" />
     <Compile Include="EntidadesDeNegocio\Modelo.cs" />
+    <Compile Include="EntidadesDeNegocio\SinGuia.cs" />
     <Compile Include="EntidadesDeNegocio\Turista.cs" />
+    <Compile Include="EntidadesDeNegocio\Usuario.cs" />
     <Compile Include="EntidadesDeNegocio\Viaje.cs" />
     <Compile Include="EntidadesDeNegocio\Vehiculo.cs" />
     <Compile Include="Fachada\Fachada.cs" />
+    <Compile Include="Interfaces\IRepositorioMarcas.cs" />
+    <Compile Include="Interfaces\IRepositorioModelos.cs" />
+    <Compile Include="Interfaces\IRepositorioTuristas.cs" />
+    <Compile Include="Interfaces\IRepositorioVehiculos.cs" />
+    <Compile Include="Interfaces\IRepositorioViajes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorios\ContenedorRepositorios.cs" />
     <Compile Include="Repositorios\RepositorioMarcas.cs" />
     <Compile Include="Repositorios\RepositorioTuristas.cs" />
     <Compile Include="Repositorios\RepositorioVehiculos.cs" />

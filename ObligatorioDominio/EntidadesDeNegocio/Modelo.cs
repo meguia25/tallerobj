@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ObligatorioDominio.EntidadesDeNegocio
 {
-    class Modelo
+    public class Modelo
     {
         public String Tipo { get; set; }
         public int Capacidad { get; set; }

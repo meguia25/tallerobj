@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ObligatorioDominio.EntidadesDeNegocio
 {
-    public class Turista
+    public class Turista: Usuario
     {
         public String Nombre { get; set; }
         public String Pais { get; set; }

@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace ObligatorioDominio.EntidadesDeNegocio
 {
-    public class Viaje
+    public class Viaje 
     {
+        public DateTime Fecha { get; set; }
+        public int Duracion { get; set; }
+        public Vehiculo Vehiculo { get; set; }
+        public Turista Turista { get; set; }
     }
 }

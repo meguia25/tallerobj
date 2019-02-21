@@ -1,0 +1,4 @@
+C:\Users\Mariana Eguia\Documents\Facultad\Taller de objetos\Obligatorio\ObligatorioDominio\bin\Debug\ObligatorioDominio.dll
+C:\Users\Mariana Eguia\Documents\Facultad\Taller de objetos\Obligatorio\ObligatorioDominio\bin\Debug\ObligatorioDominio.pdb
+C:\Users\Mariana Eguia\Documents\Facultad\Taller de objetos\Obligatorio\ObligatorioDominio\obj\Debug\ObligatorioDominio.dll
+C:\Users\Mariana Eguia\Documents\Facultad\Taller de objetos\Obligatorio\ObligatorioDominio\obj\Debug\ObligatorioDominio.pdb

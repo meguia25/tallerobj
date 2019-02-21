@@ -4,22 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ObligatorioDominio.EntidadesDeNegocio;
+using ObligatorioDominio.Interfaces;
 
 namespace ObligatorioDominio.Repositorios
 {
-    public class RepositorioTuristas
+    public class RepositorioTuristas : IRepositorioTuristas
     {
         public List<Turista> ListaTuristas = new List<Turista>();
         public RepositorioTuristas()
         {
             this.ListaTuristas = new List<Turista>();
         }
-        public bool agregarTurista(String unNombre, String unPais, int unNDocumento)
+        public bool agregarTurista(Turista unTurista)
         {
             bool alta = false;
-            if(unNombre != null && unPais != null && unNDocumento != 0)
+            if(!ListaTuristas.Contains(unTurista))
             {
-                Turista unTurista = new Turista(unNombre, unPais, unNDocumento);
                 ListaTuristas.Add(unTurista);
                 alta = true;
             }

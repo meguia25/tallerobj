@@ -3,21 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ObligatorioDominio.Repositorios;
+using ObligatorioDominio.Interfaces;
 using ObligatorioDominio.EntidadesDeNegocio;
+using ObligatorioDominio.Repositorios;
 
 namespace ObligatorioDominio.Fachada
 {
     public class Fachada
     {
-        RepositorioTuristas repoTurista = new RepositorioTuristas();
+        private ContenedorRepositorios contenedorrepo = ContenedorRepositorios.Instancia;
 
         #region Turista
 
-        public bool agregarTurista(String unNombre, String unPais, int unNDocumento)
+        public bool agregarTurista(String nombre, String pais, int nDocumento)
         {
+            Turista nuevoTurista = new Turista
+            {
+                unNombre = nombre,
+                unPais = pais,
+                unNDocumento = nDocumento
+
+            };
             bool alta = false;
-            repoTurista.agregarTurista(unNombre, unPais, unNDocumento);
+            contenedorrepo.agregarTurista(unNombre, unPais, unNDocumento);
             return alta;
         }
         #endregion
