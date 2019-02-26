@@ -198,10 +198,17 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
-    <Content Include="Contact.aspx" />
+    <Content Include="AltaTurista.aspx" />
+    <Content Include="CambioContrasenia.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\magnific-popup.css" />
+    <Content Include="css\templatemo-style.css" />
+    <Content Include="font-awesome-4.6.3\css\font-awesome.min.css" />
+    <Content Include="font-awesome-4.6.3\fonts\fontawesome-webfont.svg" />
+    <Content Include="font-awesome-4.6.3\HELP-US-OUT.txt" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -210,7 +217,23 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="js\jquery-1.11.3.min.js" />
+    <Content Include="js\jquery.magnific-popup.min.js" />
+    <Content Include="js\jquery.singlePageNav.min.js" />
+    <Content Include="ListadoVehiculos.aspx" />
+    <Content Include="ListadoViajes.aspx" />
+    <Content Include="ListadoViajesTurista.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Maestra.Master" />
+    <Content Include="font-awesome-4.6.3\fonts\fontawesome-webfont.eot" />
+    <Content Include="font-awesome-4.6.3\fonts\fontawesome-webfont.ttf" />
+    <Content Include="font-awesome-4.6.3\fonts\fontawesome-webfont.woff" />
+    <Content Include="font-awesome-4.6.3\fonts\fontawesome-webfont.woff2" />
+    <Content Include="font-awesome-4.6.3\fonts\FontAwesome.otf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="MenuAdministrador.aspx" />
+    <Content Include="MenuTurista.aspx" />
+    <Content Include="RegistroViaje.aspx" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -242,7 +265,6 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
@@ -366,6 +388,13 @@
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AltaTurista.aspx.cs">
+      <DependentUpon>AltaTurista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AltaTurista.aspx.designer.cs">
+      <DependentUpon>AltaTurista.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -377,25 +406,74 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
+    <Compile Include="CambioContrasenia.aspx.cs">
+      <DependentUpon>CambioContrasenia.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="CambioContrasenia.aspx.designer.cs">
+      <DependentUpon>CambioContrasenia.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="ListadoVehiculos.aspx.cs">
+      <DependentUpon>ListadoVehiculos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListadoVehiculos.aspx.designer.cs">
+      <DependentUpon>ListadoVehiculos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListadoViajes.aspx.cs">
+      <DependentUpon>ListadoViajes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListadoViajes.aspx.designer.cs">
+      <DependentUpon>ListadoViajes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListadoViajesTurista.aspx.cs">
+      <DependentUpon>ListadoViajesTurista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListadoViajesTurista.aspx.designer.cs">
+      <DependentUpon>ListadoViajesTurista.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maestra.Master.cs">
+      <DependentUpon>Maestra.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maestra.Master.designer.cs">
+      <DependentUpon>Maestra.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAdministrador.aspx.cs">
+      <DependentUpon>MenuAdministrador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MenuAdministrador.aspx.designer.cs">
+      <DependentUpon>MenuAdministrador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MenuTurista.aspx.cs">
+      <DependentUpon>MenuTurista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MenuTurista.aspx.designer.cs">
+      <DependentUpon>MenuTurista.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistroViaje.aspx.cs">
+      <DependentUpon>RegistroViaje.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistroViaje.aspx.designer.cs">
+      <DependentUpon>RegistroViaje.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -421,6 +499,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ObligatorioDominio\ObligatorioDominio.csproj">
+      <Project>{9897a50a-8a0e-4823-b4ae-19421accf889}</Project>
+      <Name>ObligatorioDominio</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

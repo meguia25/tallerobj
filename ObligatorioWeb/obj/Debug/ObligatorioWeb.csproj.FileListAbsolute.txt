@@ -77,3 +77,5 @@ C:\Users\Mariana Eguia\Documents\Facultad\Taller de objetos\Obligatorio\Obligato
 C:\Users\Mariana Eguia\Documents\Facultad\Taller de objetos\Obligatorio\ObligatorioWeb\obj\Debug\ObligatorioWeb.csprojResolveAssemblyReference.cache
 C:\Users\Mariana Eguia\Documents\Facultad\Taller de objetos\Obligatorio\ObligatorioWeb\obj\Debug\ObligatorioWeb.dll
 C:\Users\Mariana Eguia\Documents\Facultad\Taller de objetos\Obligatorio\ObligatorioWeb\obj\Debug\ObligatorioWeb.pdb
+C:\Users\Mariana Eguia\Documents\Facultad\Taller de objetos\Obligatorio\ObligatorioWeb\bin\ObligatorioDominio.dll
+C:\Users\Mariana Eguia\Documents\Facultad\Taller de objetos\Obligatorio\ObligatorioWeb\bin\ObligatorioDominio.pdb

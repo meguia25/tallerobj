@@ -10,5 +10,7 @@ namespace ObligatorioDominio.Interfaces
     public interface IRepositorioTuristas
     {
         bool agregarTurista(Turista unTurista);
+        Turista buscarTurista(int unNDocumento);
+        List<Turista> listadoTuristas();
     }
 }

@@ -8,7 +8,9 @@ namespace ObligatorioDominio.EntidadesDeNegocio
 {
     public class Usuario
     {
-        public String Email { get; set; }
+        public String Usu { get; set; }
         public String Contrasenia { get; set; }
+        public String Rol { get; set; }
+
     }
 }

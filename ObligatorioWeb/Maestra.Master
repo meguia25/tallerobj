@@ -1,0 +1,25 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Maestra.master.cs" Inherits="ObligatorioWeb.Maestra" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400"/> 
+    <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css"/>          
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>                                
+    <link rel="stylesheet" href="css/magnific-popup.css"/>                               
+    <link rel="stylesheet" href="css/templatemo-style.css"/> 
+    <title>Viaja Uruguay</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

@@ -25,5 +25,38 @@ namespace ObligatorioDominio.Repositorios
             }
             return alta;
         }
+        public Turista buscarTurista(int unNDocumento)
+        {
+            Turista elTurista = null;
+            bool bandera = false;
+            int i = 0;
+            while (i < ListaTuristas.Count && !bandera)
+            {
+                if (ListaTuristas[i].NDocumento == unNDocumento)
+                {
+                    elTurista = ListaTuristas[i];
+                    bandera = true;
+                }
+            }
+            return elTurista;
+        }
+        public bool cambiarContraseña(string nuevaContraseña)
+        {
+            bool cambio = false;
+            
+
+
+            return cambio;
+        }
+        public List<Turista> listadoTuristas()
+        {
+            List<Turista> lista = new List<Turista>();
+            foreach (Turista v in this.ListaTuristas)
+            {
+                lista.Add(v);
+            }
+
+            return lista;
+        }
     }
 }

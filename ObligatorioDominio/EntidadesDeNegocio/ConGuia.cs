@@ -8,5 +8,6 @@ namespace ObligatorioDominio.EntidadesDeNegocio
 {
     public class ConGuia : Viaje
     {
+
     }
 }
