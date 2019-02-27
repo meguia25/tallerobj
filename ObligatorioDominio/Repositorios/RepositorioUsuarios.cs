@@ -40,6 +40,7 @@ namespace ObligatorioDominio.Repositorios
                     elUsuario = listaUsuarios[i];
                     bandera = true;
                 }
+                i++;
             }
             return elUsuario;
         }

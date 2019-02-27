@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="EntidadesDeNegocio\Administrador.cs" />
     <Compile Include="EntidadesDeNegocio\ConGuia.cs" />
+    <Compile Include="EntidadesDeNegocio\ManejoArchivos.cs" />
     <Compile Include="EntidadesDeNegocio\Marca.cs" />
     <Compile Include="EntidadesDeNegocio\Modelo.cs" />
     <Compile Include="EntidadesDeNegocio\SinGuia.cs" />

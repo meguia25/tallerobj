@@ -12,7 +12,7 @@ namespace ObligatorioWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string u = (string)Session["Turista"];
+            string u = (string)Session["Rol"];
             int n = int.Parse(Session["NDocumento"].ToString());
             if (u == null)
             {

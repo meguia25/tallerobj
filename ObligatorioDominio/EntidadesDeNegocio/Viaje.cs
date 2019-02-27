@@ -12,6 +12,7 @@ namespace ObligatorioDominio.EntidadesDeNegocio
         public DateTime FechaFinal { get; set; }
         public Vehiculo Vehiculo { get; set; }
         public Turista Turista { get; set; }
+        public bool GuiaTuristico { get; set; }
 
     }
 }

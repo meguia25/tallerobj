@@ -13,9 +13,12 @@ namespace ObligatorioWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+            if (!IsPostBack)
+            {
+                ManejoArchivos.LeerUsuario();
+            }
         }
-        protected void btnLogin_Click(object sender, AuthenticateEventArgs e)
+        protected void btnLogin_Click(object sender, EventArgs e)
         {
             if (this.txtUsuario.Text == "" || this.txtContrasenia.Text == "")
             {

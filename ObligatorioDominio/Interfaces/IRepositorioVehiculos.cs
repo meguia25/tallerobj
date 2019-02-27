@@ -12,5 +12,6 @@ namespace ObligatorioDominio.Interfaces
     {
         Vehiculo buscarVehiculo(string unaMatricula);
         List<Vehiculo> listadoTodosLosVehiculos();
+        bool altaVehiculo(Vehiculo unVehiculo);
     }
 }

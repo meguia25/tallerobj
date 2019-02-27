@@ -41,8 +41,9 @@ namespace ObligatorioWeb
             DateTime fechaFinal = DateTime.Parse(this.TxtFechaFin.Text);
             string unaMatricula = (DDLVehiculos.SelectedItem.Text);
             int unNDocumento = int.Parse(DDLTuristas.SelectedItem.Text);
+            bool guia = bool.Parse(this.ChkGuia.Text);
 
-            nuevoViaje = Fachada.Instancia.agregarViaje(fechaInicial, fechaFinal, unaMatricula, unNDocumento);
+            nuevoViaje = Fachada.Instancia.agregarViaje(fechaInicial, fechaFinal, unaMatricula, unNDocumento,guia);
             LblMensaje.Text = "Ingreso de viaje realizada";
         }
         protected void BtnVolver_Click(object sender, EventArgs e)

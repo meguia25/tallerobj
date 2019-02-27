@@ -13,8 +13,8 @@ namespace ObligatorioWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string u = (string)Session["Turista"];
-            if (u == null)
+            string u = (string)Session["rol"];
+            if (u == null && u == "Turista")
             {
                 Response.Redirect("Login.aspx");
             }

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ObligatorioDominio.EntidadesDeNegocio;
 using ObligatorioDominio.Repositorios;
+using System.IO;
 
 namespace ObligatorioDominio.Fachada
 {
@@ -35,29 +36,6 @@ namespace ObligatorioDominio.Fachada
         #endregion
 
         #region Turista
-
-        public bool agregarTurista(String nombre, String pais, int nDocumento, string contrasenia)
-        {
-            bool alta = false;
-            Turista nuevoTurista = new Turista
-            {
-                Nombre = nombre,
-                Pais = pais,
-                NDocumento = nDocumento
-            };
-            Usuario nuevoUsuario = new Usuario
-            {
-                Usu = nDocumento.ToString(),
-                Contrasenia = contrasenia,
-                Rol = "Turista"
-            };
-            if (contenedorrepo.repoTuristas.agregarTurista(nuevoTurista) && contenedorrepo.repoUsuarios.agregarUsuario(nuevoUsuario))
-            {
-                alta = true;
-            }
-            
-            return alta;
-        }       
         public Turista buscarTurista(int unNDocumento)
         {
             Turista tur = contenedorrepo.repoTuristas.buscarTurista(unNDocumento);
@@ -80,13 +58,34 @@ namespace ObligatorioDominio.Fachada
         }
         public List<Viaje> listadoViajesXTurista(int unNDocumento)
         {
-            return contenedorrepo.repoViajes.listadoViajesXTurista(unNDocumento);
+            return contenedorrepo.repoViajes.listaViajesXTurista(unNDocumento);
         }
-
         #endregion
 
         #region Administrador
-        public bool agregarViaje(DateTime fechaInicial, DateTime fechaFinal, string unaMatricula, int unNDocumento)
+        public bool agregarTurista(String nombre, String pais, int nDocumento, string contrasenia)
+        {
+            bool alta = false;
+            Turista nuevoTurista = new Turista
+            {
+                Nombre = nombre,
+                Pais = pais,
+                NDocumento = nDocumento
+            };
+            Usuario nuevoUsuario = new Usuario
+            {
+                Usu = nDocumento.ToString(),
+                Contrasenia = contrasenia,
+                Rol = "Turista"
+            };
+            if (contenedorrepo.repoTuristas.agregarTurista(nuevoTurista) && contenedorrepo.repoUsuarios.agregarUsuario(nuevoUsuario))
+            {
+                alta = true;
+            }
+
+            return alta;
+        }
+        public bool agregarViaje(DateTime fechaInicial, DateTime fechaFinal, string unaMatricula, int unNDocumento, bool guia)
         {
             bool alta = false;
             Vehiculo elVehiculo = contenedorrepo.repoVehiculos.buscarVehiculo(unaMatricula);
@@ -98,7 +97,8 @@ namespace ObligatorioDominio.Fachada
                     FechaInicial = fechaInicial,
                     FechaFinal = fechaFinal,
                     Vehiculo = elVehiculo,
-                    Turista = elTurista
+                    Turista = elTurista,
+                    GuiaTuristico = guia
                 };
                 contenedorrepo.repoViajes.registarViaje(nuevoViaje);
                 //ver if bien
@@ -122,6 +122,32 @@ namespace ObligatorioDominio.Fachada
             List<Turista> lista = new List<Turista>();
             lista = contenedorrepo.repoTuristas.listadoTuristas();
             return lista;
+        }
+
+
+
+
+
+
+        #endregion
+
+        #region Manejo de archivos
+
+        public bool agregarUsuarioDesdeArchivo(Usuario unUsuario)
+        {
+            return contenedorrepo.repoUsuarios.agregarUsuario(unUsuario);
+        }
+        public bool agregarMarcaDesdeArchivo(Marca unaMarca)
+        {
+            return contenedorrepo.repoMarcas.altaMarca(unaMarca);
+        }
+        public bool agregarModeloDesdeArchivo(Modelo unModelo)
+        {
+            return contenedorrepo.repoModelos.altaModelo(unModelo);
+        }
+        public bool agregarVehiculoDesdeArchivo(Vehiculo unVehiculo)
+        {
+            return contenedorrepo.repoVehiculos.altaVehiculo(unVehiculo);
         }
         #endregion
     }

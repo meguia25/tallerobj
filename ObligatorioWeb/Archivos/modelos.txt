@@ -1,0 +1,14 @@
+A100;K1;Sedan;4;10;1
+A101;J1;Camioneta;6;11;2
+A102;M1;Auto;4;12;3
+A103;K2;Limousine;10;15;4
+A104;J2;Sedan;10;16;5
+A105;M2;Camioneta;11,6;17,6;6
+A106;K3;Auto;13,2;19,2;7
+A107;J3;Limousine;14,8;20,8;8
+A108;M3;Sedan;16,4;22,4;9
+A109;K4;Camioneta;18;24;10
+A110;J4;Auto;19,6;25,6;11
+A111;M4;Limousine;21,2;27,2;12
+A112;J5;Auto;22,8;28,8;13
+A113;M5;Limousine;24,4;30,4;14

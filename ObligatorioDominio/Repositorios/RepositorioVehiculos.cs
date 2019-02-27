@@ -16,7 +16,16 @@ namespace ObligatorioDominio.Repositorios
         {
             this.listaVehiculos = new List<Vehiculo>();
         }
-
+        public bool altaVehiculo(Vehiculo unVehiculo)
+        {
+            bool alta = false;
+            if (!listaVehiculos.Contains(unVehiculo))
+            {
+                listaVehiculos.Add(unVehiculo);
+                alta = true;
+            }
+            return alta;
+        }
         public Vehiculo buscarVehiculo(string laMatricula)
         {
             Vehiculo elVehiculo = null;
